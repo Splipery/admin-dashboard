@@ -1,12 +1,19 @@
 * {
-    border: 1px solid rebeccapurple;
+    /*border: 1px solid rebeccapurple;*/
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body, html, p {
+body, html {
     height: 100%;
     margin: 0;
     border: none;
+    color: #064e3b;
+}
+
+img {
+    height: 80%;
+    width: 80%;
 }
 
 #container {
@@ -25,6 +32,8 @@ body, html, p {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(10, 1fr);
+    background-color: #059669;
+    color: #ecfdf5;
 }
 
 #dashHead {
@@ -32,10 +41,15 @@ body, html, p {
     grid-column: 1 / 3;
     display: grid;
     grid-template-columns: 6;
+    color: #ecfdf5;
 }
 
 #dashHead>img {
     grid-column: 1 / 3;
+}
+
+.headIcon, .elementIcon {
+    filter: invert(98%) sepia(21%) saturate(232%) hue-rotate(72deg) brightness(97%) contrast(105%);
 }
 
 #dashHead>h1 {
@@ -65,6 +79,12 @@ li {
 
 .elementIcon {
     grid-column: 1 / 2;
+}
+
+.listText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #header {
@@ -129,6 +149,10 @@ li {
 
 #greetingSection {
     grid-column: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
 }
 
 #buttonSection {
@@ -159,22 +183,28 @@ li {
 
 .mainCard {
     margin: 8px;
-    border-radius: 16px;
+    border-radius: 13px;
     display: grid;
     grid-template-columns: 10px auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px gray;
+    min-height: 200px;
+    min-width: 300px;
 }
 
 .colourBar {
-    background-color: aqua;
+    background-color: #6ee7b7;
     grid-column: 1 / 2;
     grid-row: 1 / 5;
     border-radius: 16px 0 0 16px;
+    z-index: -1;
 }
 
 .textArea {
     grid-column: 2 / 3;
     grid-row: 1 / 4;
+    padding-left: 1em;
 }
 
 .cardIcons {
@@ -204,6 +234,7 @@ li {
     grid-row: 1 / 2;
     display: grid;
     grid-template-rows: 1fr 3fr;
+    padding: 8px;
 }
 
 #contentRightTop>.mainHeader {
@@ -219,19 +250,51 @@ li {
 .announcement {
     display: grid;
     grid-template-rows: 1fr 2fr;
+    border-bottom: 1px solid lightgray;
 }
 
 .announcementHead {
     grid-row: 1 / 2;
     margin: 0;
+    padding-left: 5px;
 }
 
 .announcementText {
     grid-row: 2 / 3;
     margin: 0;
+    padding: 5px;
+}
+
+.last {
+    border-bottom: none;
 }
 
 #contentRightBottom {
     grid-row: 2 / 3;
+    padding: 8px;
 }
 
+.lowerContent, .sideBarContent {
+    box-shadow: 1px 1px 5px gray;
+    padding: 15px;
+}
+
+.bContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #059669;
+    width: 80%;
+    height: 30%;
+    border-radius: 8px;
+    color: #ecfdf5;
+    border: 1px solid #059669;
+}
+
+button:hover {
+    background-color: #064e3b;
+}
